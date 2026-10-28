@@ -1,0 +1,24 @@
+{
+  "name": "audio-transcription-api",
+  "version": "1.0.0",
+  "description": "Node.js audio transcription API with timestamps, long-audio chunking, bounded concurrency, retries, and persistent job tracking.",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "worker": "node src/worker.js",
+    "dev:api": "node --watch src/server.js",
+    "dev:worker": "node --watch src/worker.js",
+    "test": "node --test"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "bullmq": "^5.34.10",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "ioredis": "^5.4.2",
+    "multer": "^1.4.5-lts.1",
+    "openai": "^4.77.0",
+    "pg": "^8.13.1"
+  }
+}
